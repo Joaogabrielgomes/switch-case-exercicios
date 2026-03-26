@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Case</title>
+</head>
+<body>
+
+    <h2>1 - Estilo de Filme Favorito</h2>
+    <p>Escolha seu estilo de filme favorito:</p>
+    <ol>
+        <li>Ação</li>
+        <li>Comédia</li>
+        <li>Drama</li>
+        <li>Terror</li>
+        <li>Ficção Científica</li>
+        <li>Romance</li>
+    </ol>
+    <input placeholder="Digite o número do estilo" id="filme"><br><br>
+    <button onclick="escolherFilme()">Selecionar Filme</button>
+    <p id="resultadoFilme"></p>
+    <hr>
+
+    <h2>2 - Gênero Musical Preferido</h2>
+    <p>Escolha seu gênero musical favorito:</p>
+    <ol>
+        <li>Rock</li>
+        <li>Pop</li>
+        <li>Hip Hop</li>
+        <li>Eletrônica</li>
+        <li>Jazz</li>
+        <li>Clássica</li>
+    </ol>
+    <input placeholder="Digite o número do gênero" id="musica"><br><br>
+    <button onclick="escolherMusica()">Selecionar Música</button>
+    <p id="resultadoMusica"></p>
+    <hr>
+
+    <h2>3 - Tema Escolhido</h2>
+    <p>Escolha seu tema de interesse (1-6):</p>
+    <ol>
+        <li>Tecnologia</li>
+        <li>Esportes</li>
+        <li>Ciência</li>
+        <li>Artes</li>
+        <li>História</li>
+        <li>Literatura</li>
+    </ol>
+    <input placeholder="Digite o número do tema" id="tema"><br><br>
+    <button onclick="escolherTema()">Selecionar Tema</button>
+    <p id="resultadoTema"></p>
+
+    <script>
+        function escolherFilme() {
+            var escolha = Number(document.getElementById('filme').value);
+            var mensagem;
+            switch(escolha) {
+                case 1: mensagem = "Seu estilo de filme favorito é: Ação"; 
+                break;
+                case 2: mensagem = "Seu estilo de filme favorito é: Comédia"; 
+                break;
+                case 3: mensagem = "Seu estilo de filme favorito é: Drama"; 
+                break;
+                case 4: mensagem = "Seu estilo de filme favorito é: Terror"; 
+                break;
+                case 5: mensagem = "Seu estilo de filme favorito é: Ficção Científica"; 
+                break;
+                case 6: mensagem = "Seu estilo de filme favorito é: Romance"; 
+                break;
+                default: mensagem = "Opção inválida! Escolha um número entre 1 e 6."; 
+            }
+            document.getElementById("resultadoFilme").innerText = mensagem;
+        }
+
+        function escolherMusica() {
+            var escolha = Number(document.getElementById('musica').value);
+            var mensagem;
+            switch(escolha) {
+                case 1: mensagem = "Seu gênero musical favorito é: Rock"; 
+                break;
+                case 2: mensagem = "Seu gênero musical favorito é: Pop"; 
+                break;
+                case 3: mensagem = "Seu gênero musical favorito é: Hip Hop"; 
+                break;
+                case 4: mensagem = "Seu gênero musical favorito é: Eletrônica"; 
+                break;
+                case 5: mensagem = "Seu gênero musical favorito é: Jazz"; 
+                break;
+                case 6: mensagem = "Seu gênero musical favorito é: Clássica"; 
+                break;
+                default: mensagem = "Opção inválida! Escolha um número entre 1 e 6."; 
+            }
+            document.getElementById("resultadoMusica").innerText = mensagem;
+        }
+
+        function escolherTema() {
+            var escolha = Number(document.getElementById('tema').value);
+            var mensagem;
+            switch(escolha) {
+                case 1: mensagem = "Você escolheu Tecnologia! Explore habilidades em programação, robótica e inovação."; 
+                break;
+                case 2: mensagem = "Você escolheu Esportes! Desenvolva disciplina, força e trabalho em equipe."; 
+                break;
+                case 3: mensagem = "Você escolheu Ciência! Descubra experimentos, pesquisas e raciocínio lógico."; 
+                break;
+                case 4: mensagem = "Você escolheu Artes! Explore criatividade, pintura, música e expressão."; 
+                break;
+                case 5: mensagem = "Você escolheu História! Estude culturas, eventos e civilizações."; 
+                break;
+                case 6: mensagem = "Você escolheu Literatura! Desenvolva leitura, escrita e interpretação."; 
+                break;
+                default: mensagem = "Opção inválida! Escolha um número entre 1 e 6."; 
+            }
+            document.getElementById("resultadoTema").innerText = mensagem;
+        }
+    </script>
+</body>
+</html>
